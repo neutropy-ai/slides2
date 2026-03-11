@@ -1,8 +1,8 @@
-import Slide from '../../components/Slide'
-import Topbar, { SlideNumber } from '../../components/Topbar'
-import GlassDivider from '../../components/glass/GlassDivider'
-import BlurReveal from '../../components/anim/BlurReveal'
-import FadeUp from '../../components/anim/FadeUp'
+import Slide from '../../../components/Slide'
+import Topbar, { SlideNumber } from '../../../components/Topbar'
+import GlassDivider from '../../../components/glass/GlassDivider'
+import BlurReveal from '../../../components/anim/BlurReveal'
+import FadeUp from '../../../components/anim/FadeUp'
 
 const ATM = 'radial-gradient(ellipse 70% 60% at 50% 100%, rgba(6,182,212,0.05), transparent 50%), #000'
 

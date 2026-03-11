@@ -1,7 +1,7 @@
-import Slide from '../../components/Slide'
-import Topbar, { MetadataRow } from '../../components/Topbar'
-import GlassDivider from '../../components/glass/GlassDivider'
-import SlideUpLine from '../../components/anim/SlideUpLine'
+import Slide from '../../../components/Slide'
+import Topbar, { MetadataRow } from '../../../components/Topbar'
+import GlassDivider from '../../../components/glass/GlassDivider'
+import SlideUpLine from '../../../components/anim/SlideUpLine'
 
 const ATM = 'radial-gradient(ellipse 80% 60% at 20% 80%, rgba(6,182,212,0.06), transparent 60%), radial-gradient(ellipse 50% 40% at 85% 15%, rgba(14,165,233,0.03), transparent), #000'
 
