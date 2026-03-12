@@ -16,13 +16,14 @@ export function Logo() {
   return (
     <div className="flex items-center gap-2.5">
       <div
-        className="w-8 h-8 rounded-lg flex items-center justify-center"
-        style={{ background: 'linear-gradient(135deg, var(--teal), var(--teal-2))' }}
+        className="w-8 h-8 rounded-[10px] flex items-center justify-center"
+        style={{
+          background: 'linear-gradient(160deg, #00E5F5 0%, #06B6D4 50%, #0891B2 100%)',
+          boxShadow: '0 0 20px rgba(6,182,212,0.3), 0 0 6px rgba(6,182,212,0.15)',
+        }}
       >
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2L2 7l10 5 10-5-10-5z" />
-          <path d="M2 17l10 5 10-5" />
-          <path d="M2 12l10 5 10-5" />
+        <svg width="16" height="16" viewBox="0 0 32 32" fill="none" stroke="#0a2a2e" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M10 24V16L22 8" />
         </svg>
       </div>
       <span className="font-sans font-semibold text-[15px] text-white tracking-tight">Neutropy</span>
