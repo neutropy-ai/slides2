@@ -10,7 +10,7 @@ const ATM = 'radial-gradient(ellipse 60% 50% at 75% 55%, rgba(99,102,241,0.05), 
 export default function AppointmentReminderSlide({ isActive, slideIndex }) {
   return (
     <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
-      <Topbar right={<SlideNumber n="5b" />} />
+      <Topbar right={<SlideNumber n={5} />} />
       <GlassDivider />
 
       <div className="flex-1 flex px-[5%] py-[3%] pb-[5%] gap-[5%]">
