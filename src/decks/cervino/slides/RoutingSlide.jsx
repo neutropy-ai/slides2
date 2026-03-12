@@ -24,7 +24,7 @@ export default function RoutingSlide({ isActive, slideIndex }) {
           </BlurReveal>
           <BlurReveal delay={0.25}>
             <h2 className="font-serif font-normal text-white mt-3" style={{ fontSize: 'clamp(20px, 3.5vw, 56px)', lineHeight: 1.04 }}>
-              The patient describes symptoms. The AI <i style={{ color: 'var(--teal)' }}>triages.</i>
+              The patient describes symptoms. The AI <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>triages.</i>
             </h2>
           </BlurReveal>
           <BlurReveal delay={0.5}>

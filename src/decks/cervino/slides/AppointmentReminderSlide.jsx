@@ -5,12 +5,12 @@ import GlassPhone, { PhoneCallHeader, PhoneTranscript, TranscriptMsg, RoutingTag
 import BlurReveal from '../../../components/anim/BlurReveal'
 import FadeUp from '../../../components/anim/FadeUp'
 
-const ATM = 'radial-gradient(ellipse 60% 50% at 75% 55%, rgba(6,182,212,0.05), transparent), #000'
+const ATM = 'radial-gradient(ellipse 60% 50% at 75% 55%, rgba(99,102,241,0.05), transparent), #000'
 
-export default function GPReferralSlide({ isActive, slideIndex }) {
+export default function AppointmentReminderSlide({ isActive, slideIndex }) {
   return (
     <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
-      <Topbar right={<SlideNumber n={5} />} />
+      <Topbar right={<SlideNumber n="5b" />} />
       <GlassDivider />
 
       <div className="flex-1 flex px-[5%] py-[3%] pb-[5%] gap-[5%]">
@@ -22,25 +22,25 @@ export default function GPReferralSlide({ isActive, slideIndex }) {
           </BlurReveal>
           <BlurReveal delay={0.25}>
             <h2 className="font-serif font-normal text-white mt-3" style={{ fontSize: 'clamp(20px, 3.5vw, 56px)', lineHeight: 1.04 }}>
-              Your AI calls the GP.<br />
-              <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Not the other way around.</i>
+              Your AI calls patients.<br />
+              <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Before they forget.</i>
             </h2>
           </BlurReveal>
           <BlurReveal delay={0.5}>
             <p className="mt-3.5 max-w-[480px]" style={{ fontSize: 'clamp(12px, 1vw, 16px)', color: 'var(--muted)', lineHeight: 1.6 }}>
-              Referrals arrive with missing details. Instead of your admin spending hours on phone tag, the AI handles the follow-up.
+              No-shows cost clinics thousands per month. Instead of relying on texts patients ignore, the AI calls ahead to confirm, reschedule, or backfill the slot.
             </p>
           </BlurReveal>
           <BlurReveal delay={0.7}>
             <div className="flex flex-col gap-2 mt-5">
               {[
-                'Calls GP to confirm referral details',
-                'Collects missing medical history',
-                'Confirms correct specialist assignment',
-                'Schedules patient, sends all confirmations',
+                'Calls patients 48h before appointment',
+                'Confirms attendance or reschedules',
+                'Offers open slots to waitlisted patients',
+                'Sends follow-up WhatsApp confirmation',
               ].map((item, i) => (
                 <div key={i} className="flex gap-2 text-[clamp(12px,1vw,14px)]" style={{ color: 'var(--muted)' }}>
-                  <span style={{ color: 'var(--teal)' }}>+</span> {item}
+                  <span style={{ color: '#04B2BB' }}>+</span> {item}
                 </div>
               ))}
             </div>
@@ -51,24 +51,24 @@ export default function GPReferralSlide({ isActive, slideIndex }) {
           <GlassPhone>
             <PhoneCallHeader
               avatar="AI"
-              name="Calling: Dr. Murphy's Practice"
-              status="Outbound · Referral Follow-up"
-              duration="00:47"
+              name="Calling: Michael Brennan"
+              status="Outbound · Appointment Reminder"
+              duration="00:32"
             />
             <PhoneTranscript>
               <TranscriptMsg role="ai">
-                Good afternoon, I'm calling from Cervino Medical regarding a neurology referral for a patient of Dr. Murphy's.
+                Hi Michael, I'm calling from Cervino Medical to confirm your neurology appointment with Prof Widdess-Walsh this Thursday at 10am. Will you be able to attend?
               </TranscriptMsg>
               <TranscriptMsg role="caller">
-                Yes, what do you need?
+                Oh right, I actually need to reschedule — I've a conflict Thursday morning.
               </TranscriptMsg>
               <TranscriptMsg role="ai">
-                The referral letter didn't include the patient's current medication list. Could someone send that through? I can provide the secure email.
+                No problem. I have Friday at 2:30pm available with the same consultant. Would that work?
               </TranscriptMsg>
               <TranscriptMsg role="caller">
-                Sure, I'll get that over today.
+                Friday works perfectly, thanks.
               </TranscriptMsg>
-              <RoutingTag>Referral Complete</RoutingTag>
+              <RoutingTag>Rescheduled · Slot Released</RoutingTag>
             </PhoneTranscript>
           </GlassPhone>
         </FadeUp>

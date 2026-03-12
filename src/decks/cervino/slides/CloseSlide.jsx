@@ -21,7 +21,7 @@ export default function CloseSlide({ isActive, slideIndex }) {
             <SlideUpLine delay={0.3}>Next step is</SlideUpLine>
             <br />
             <SlideUpLine delay={0.4}>
-              <i style={{ color: 'var(--teal)' }}>simple.</i>
+              <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>simple.</i>
             </SlideUpLine>
           </h2>
           <BlurReveal delay={0.7}>

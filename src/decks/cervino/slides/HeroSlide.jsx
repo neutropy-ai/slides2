@@ -28,7 +28,7 @@ export default function HeroSlide({ isActive, slideIndex }) {
           <SlideUpLine delay={0.3}>AI communication</SlideUpLine>
           <br />
           <SlideUpLine delay={0.4}>
-            for <i style={{ color: 'var(--teal)' }}>healthcare.</i>
+            for <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>healthcare.</i>
           </SlideUpLine>
         </h1>
       </div>

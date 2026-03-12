@@ -44,7 +44,7 @@ export default function PatientJourneySlide({ isActive, slideIndex }) {
           </BlurReveal>
           <BlurReveal delay={0.25}>
             <h2 className="font-serif font-normal text-white mt-3" style={{ fontSize: 'clamp(20px, 3vw, 48px)', lineHeight: 1.04 }}>
-              Every touchpoint. Automated by <i style={{ color: 'var(--teal)' }}>specialty.</i>
+              Every touchpoint. Automated by <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>specialty.</i>
             </h2>
           </BlurReveal>
 

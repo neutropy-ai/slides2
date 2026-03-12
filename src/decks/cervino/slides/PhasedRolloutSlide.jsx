@@ -35,7 +35,7 @@ export default function PhasedRolloutSlide({ isActive, slideIndex }) {
         </BlurReveal>
         <BlurReveal delay={0.25}>
           <h2 className="font-serif font-normal text-white mt-3" style={{ fontSize: 'clamp(20px, 3.5vw, 52px)', lineHeight: 1.04 }}>
-            Your clinic first. Then your <i style={{ color: 'var(--teal)' }}>clients.</i>
+            Your clinic first. Then your <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>clients.</i>
           </h2>
         </BlurReveal>
 

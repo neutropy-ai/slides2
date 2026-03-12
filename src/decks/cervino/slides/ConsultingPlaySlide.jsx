@@ -28,7 +28,7 @@ export default function ConsultingPlaySlide({ isActive, slideIndex }) {
         <BlurReveal delay={0.25}>
           <h2 className="font-serif font-normal text-white mt-3" style={{ fontSize: 'clamp(20px, 4vw, 64px)', lineHeight: 1.04 }}>
             A new service line.<br />
-            <i style={{ color: 'var(--teal)' }}>Recurring revenue.</i>
+            <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Recurring revenue.</i>
           </h2>
         </BlurReveal>
         <BlurReveal delay={0.5}>

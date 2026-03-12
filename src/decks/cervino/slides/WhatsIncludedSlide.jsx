@@ -38,7 +38,7 @@ export default function WhatsIncludedSlide({ isActive, slideIndex }) {
         <BlurReveal delay={0.25}>
           <h2 className="font-serif font-normal text-white mt-3" style={{ fontSize: 'clamp(20px, 3.5vw, 52px)', lineHeight: 1.04 }}>
             Everything you need.<br />
-            <i style={{ color: 'var(--teal)' }}>Nothing you don't.</i>
+            <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Nothing you don't.</i>
           </h2>
         </BlurReveal>
         <BlurReveal delay={0.4}>

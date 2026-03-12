@@ -4,6 +4,7 @@ import ProblemSlide from './slides/ProblemSlide'
 import WhatWeDoSlide from './slides/WhatWeDoSlide'
 import RoutingSlide from './slides/RoutingSlide'
 import GPReferralSlide from './slides/GPReferralSlide'
+import AppointmentReminderSlide from './slides/AppointmentReminderSlide'
 import PatientJourneySlide from './slides/PatientJourneySlide'
 import ProofSlide from './slides/ProofSlide'
 import ConsultingPlaySlide from './slides/ConsultingPlaySlide'
@@ -19,6 +20,7 @@ export default function CervinoDeck() {
       <WhatWeDoSlide />
       <RoutingSlide />
       <GPReferralSlide />
+      <AppointmentReminderSlide />
       <PatientJourneySlide />
       <ProofSlide />
       <ConsultingPlaySlide />
