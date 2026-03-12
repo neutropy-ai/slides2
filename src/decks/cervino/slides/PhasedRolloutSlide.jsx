@@ -8,16 +8,28 @@ const ATM = 'radial-gradient(ellipse 60% 50% at 75% 55%, rgba(6,182,212,0.05), t
 
 const phases = [
   {
-    n: 1, tag: 'GO LIVE', title: 'Week 1 to 2',
-    desc: 'AI Receptionist trained on all 7 specialties. Intelligent routing live on inbound calls. WhatsApp reminders configured per department.',
+    num: '01', tag: 'Go Live', title: 'Week 1–2',
+    items: [
+      'AI Receptionist trained on all 7 specialties',
+      'Intelligent routing live on inbound calls',
+      'WhatsApp reminders configured per department',
+    ],
   },
   {
-    n: 2, tag: 'LAYER ON', title: 'Week 3 to 4',
-    desc: 'GP referral agent goes live. Waitlist backfill activated. Specialty-specific prep instructions and post-visit follow-ups.',
+    num: '02', tag: 'Layer On', title: 'Week 3–4',
+    items: [
+      'GP referral agent goes live',
+      'Waitlist backfill activated',
+      'Specialty-specific prep and follow-ups',
+    ],
   },
   {
-    n: 3, tag: 'SCALE', title: 'Month 2+',
-    desc: 'Deploy to your first consulting client. Template the setup. Build the repeatable model. AI communication as a standard deliverable.',
+    num: '03', tag: 'Scale', title: 'Month 2+',
+    items: [
+      'Deploy to first consulting client',
+      'Template the setup for repeatable rollout',
+      'AI comms as a standard deliverable',
+    ],
   },
 ]
 
@@ -39,42 +51,42 @@ export default function PhasedRolloutSlide({ isActive, slideIndex }) {
           </h2>
         </BlurReveal>
 
-        <div className="grid grid-cols-3 gap-[clamp(12px,1.5vw,20px)] mt-[clamp(28px,3vw,40px)] max-w-[1000px]">
-          {phases.map((p, i) => (
-            <FadeUp key={i} delay={0.5 + i * 0.1}>
-              <div
-                className="rounded-2xl overflow-hidden relative"
-                style={{
-                  background: 'rgba(255,255,255,0.025)',
-                  border: '1px solid rgba(255,255,255,0.06)',
-                  borderTop: '2px solid var(--teal)',
-                  backdropFilter: 'blur(12px)',
-                  WebkitBackdropFilter: 'blur(12px)',
-                }}
-              >
-                <div
-                  className="absolute top-0 left-0 right-0 h-px"
-                  style={{ background: 'linear-gradient(90deg, transparent, rgba(6,182,212,0.15) 50%, transparent)' }}
-                />
-                <div className="p-[clamp(18px,2vw,28px)]">
-                  <div className="flex items-center gap-2.5 mb-2.5">
-                    <div
-                      className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-                      style={{ background: 'linear-gradient(135deg, var(--teal), var(--teal-2))' }}
-                    >
-                      {p.n}
+        <FadeUp delay={0.5} className="mt-[clamp(28px,4vw,48px)]">
+          <div className="grid grid-cols-3 gap-[clamp(24px,3vw,48px)] max-w-[1000px]">
+            {phases.map((p, i) => (
+              <div key={i} className="flex flex-col">
+                {/* Number + line */}
+                <div className="flex items-center gap-3 mb-2">
+                  <span
+                    className="text-[clamp(11px,0.9vw,13px)] font-semibold tracking-wide"
+                    style={{ color: i === 2 ? 'var(--teal)' : 'var(--muted-2)' }}
+                  >
+                    {p.num}
+                  </span>
+                  <div className="flex-1 h-px" style={{ background: i === 2 ? 'linear-gradient(90deg, var(--teal), transparent)' : 'rgba(255,255,255,0.08)' }} />
+                </div>
+                {/* Tag */}
+                <span
+                  className="text-[9px] font-semibold tracking-[0.12em] uppercase mb-1.5"
+                  style={{ color: i === 2 ? 'var(--teal)' : 'var(--muted)' }}
+                >
+                  {p.tag}
+                </span>
+                {/* Title */}
+                <h3 className="font-sans font-semibold text-[clamp(16px,1.4vw,22px)] text-white mb-3">{p.title}</h3>
+                {/* Items */}
+                <div className="flex flex-col gap-1.5">
+                  {p.items.map((item, j) => (
+                    <div key={j} className="flex gap-2 text-[clamp(11px,0.9vw,14px)]" style={{ color: 'var(--muted)', lineHeight: 1.5 }}>
+                      <span className="shrink-0" style={{ color: i === 2 ? 'var(--teal)' : 'var(--muted-2)' }}>+</span>
+                      <span>{item}</span>
                     </div>
-                    <span className="text-[10px] font-semibold tracking-[0.1em] uppercase" style={{ color: 'var(--teal)' }}>
-                      {p.tag}
-                    </span>
-                  </div>
-                  <h3 className="font-sans font-semibold text-[clamp(14px,1.2vw,18px)] text-white mb-1.5">{p.title}</h3>
-                  <p className="font-sans text-[clamp(12px,1vw,15px)] leading-relaxed" style={{ color: 'var(--muted)' }}>{p.desc}</p>
+                  ))}
                 </div>
               </div>
-            </FadeUp>
-          ))}
-        </div>
+            ))}
+          </div>
+        </FadeUp>
       </div>
     </Slide>
   )
