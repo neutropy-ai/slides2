@@ -57,13 +57,12 @@ export default function GlassNav({ current, total, goTo }) {
                 width: isActive ? '24px' : '8px',
                 height: '8px',
                 background: isActive
-                  ? 'linear-gradient(90deg, var(--teal), var(--teal-2))'
+                  ? 'rgba(255, 255, 255, 0.85)'
                   : 'rgba(255, 255, 255, 0.2)',
                 cursor: 'pointer',
                 transitionTimingFunction: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
-                /* Active dot glow */
                 boxShadow: isActive
-                  ? '0 0 8px 2px rgba(45, 212, 191, 0.45), 0 0 2px rgba(45, 212, 191, 0.3)'
+                  ? '0 0 6px 1px rgba(255, 255, 255, 0.2)'
                   : 'none',
               }}
               aria-label={`Go to slide ${i + 1}`}

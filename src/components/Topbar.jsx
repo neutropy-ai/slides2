@@ -20,7 +20,7 @@ export function Logo() {
         alt="Neutropy"
         className="w-8 h-8 rounded-[10px] object-contain"
       />
-      <span className="font-sans font-semibold text-[15px] text-white tracking-tight">Neutropy</span>
+      <span className="font-sans font-semibold text-[15px] text-white tracking-[0.03em]">Neutropy</span>
     </div>
   )
 }
