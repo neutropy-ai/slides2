@@ -3,11 +3,13 @@ import HeroSlide from './slides/HeroSlide'
 import ProblemSlide from './slides/ProblemSlide'
 import WhatWeDoSlide from './slides/WhatWeDoSlide'
 import RoutingSlide from './slides/RoutingSlide'
+import GPReferralSlide from './slides/GPReferralSlide'
+import PatientJourneySlide from './slides/PatientJourneySlide'
+import ProofSlide from './slides/ProofSlide'
+import ConsultingPlaySlide from './slides/ConsultingPlaySlide'
+import PhasedRolloutSlide from './slides/PhasedRolloutSlide'
+import WhatsIncludedSlide from './slides/WhatsIncludedSlide'
 import CloseSlide from './slides/CloseSlide'
-
-// TODO: Add remaining slides (GP Referral, Patient Journey, Proof of Concept,
-// Consulting Play, Phased Rollout, What's Included) following the same pattern.
-// Each slide is a standalone component using Slide, glass components, and anim primitives.
 
 export default function CervinoDeck() {
   return (
@@ -16,12 +18,12 @@ export default function CervinoDeck() {
       <ProblemSlide />
       <WhatWeDoSlide />
       <RoutingSlide />
-      {/* <GPReferralSlide /> */}
-      {/* <PatientJourneySlide /> */}
-      {/* <ProofSlide /> */}
-      {/* <ConsultingPlaySlide /> */}
-      {/* <PhasedRolloutSlide /> */}
-      {/* <WhatsIncludedSlide /> */}
+      <GPReferralSlide />
+      <PatientJourneySlide />
+      <ProofSlide />
+      <ConsultingPlaySlide />
+      <PhasedRolloutSlide />
+      <WhatsIncludedSlide />
       <CloseSlide />
     </Deck>
   )
