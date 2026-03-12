@@ -22,7 +22,7 @@ export default function HeroSlide({ isActive, slideIndex }) {
 
       <div className="flex-1 flex items-end px-[5%] pb-[8%]">
         <h1
-          className="font-serif font-normal text-white tracking-tighter"
+          className="font-serif font-light text-white tracking-tighter"
           style={{ fontSize: 'clamp(48px, 10vw, 140px)', lineHeight: 0.9 }}
         >
           <SlideUpLine delay={0.3}>AI communication</SlideUpLine>
