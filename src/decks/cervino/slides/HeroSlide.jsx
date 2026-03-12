@@ -36,7 +36,16 @@ export default function HeroSlide({ isActive, slideIndex }) {
           <SlideUpLine delay={0.3}>AI communication</SlideUpLine>
           <br />
           <SlideUpLine delay={0.4}>
-            for <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>healthcare.</i>
+            for <i
+              style={{
+                position: 'relative',
+                display: 'inline-block',
+                background: 'linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.4) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                filter: 'drop-shadow(0 0 40px rgba(255,255,255,0.12)) drop-shadow(0 0 12px rgba(6,182,212,0.2))',
+              }}
+            >healthcare.</i>
           </SlideUpLine>
         </h1>
       </div>
