@@ -1,16 +1,15 @@
 import Slide from '../../../components/Slide'
 import Topbar, { SlideNumber } from '../../../components/Topbar'
 import GlassDivider from '../../../components/glass/GlassDivider'
-import GlassCard from '../../../components/glass/GlassCard'
 import BlurReveal from '../../../components/anim/BlurReveal'
 import FadeUp from '../../../components/anim/FadeUp'
 
 const ATM = 'radial-gradient(ellipse 80% 60% at 25% 70%, rgba(6,182,212,0.07), transparent), radial-gradient(ellipse 40% 30% at 80% 15%, rgba(14,165,233,0.03), transparent), #080a0f'
 
-const flow = [
-  { emoji: '\u{1F3E5}', title: 'Client Practice', desc: 'Has communication gaps', variant: 'default' },
-  { emoji: '\u{1F4CB}', title: 'Cervino Audit', desc: 'You identify the problems', variant: 'teal' },
-  { emoji: '\u26A1', title: 'Neutropy Deploys', desc: 'We build and manage the AI', variant: 'solid' },
+const steps = [
+  { num: '01', title: 'Client Practice', desc: 'Has communication gaps — missed calls, no-shows, manual follow-ups' },
+  { num: '02', title: 'Cervino Audit', desc: 'You identify the problems and recommend AI-powered solutions' },
+  { num: '03', title: 'Neutropy Deploys', desc: 'We build, integrate, and manage everything end-to-end' },
 ]
 
 export default function ConsultingPlaySlide({ isActive, slideIndex }) {
@@ -37,23 +36,26 @@ export default function ConsultingPlaySlide({ isActive, slideIndex }) {
           </p>
         </BlurReveal>
 
-        <FadeUp delay={0.7} className="flex items-center gap-0 mt-[clamp(24px,3vw,36px)] max-w-[900px]">
-          {flow.map((f, i) => (
-            <div key={i} className="contents">
-              {i > 0 && (
-                <div className="px-2 text-lg flex-shrink-0" style={{ color: 'var(--muted-2)' }}>{'\u2192'}</div>
-              )}
-              <div className="flex-1">
-                <GlassCard variant={f.variant}>
-                  <div className="text-center">
-                    <div className="text-xl mb-1.5">{f.emoji}</div>
-                    <h4 className="font-sans font-semibold text-[clamp(12px,1vw,15px)] text-white">{f.title}</h4>
-                    <p className="text-[clamp(10px,0.85vw,13px)] mt-1" style={{ color: f.variant === 'solid' ? 'rgba(255,255,255,0.8)' : 'var(--muted)' }}>{f.desc}</p>
-                  </div>
-                </GlassCard>
+        <FadeUp delay={0.7} className="mt-[clamp(28px,4vw,48px)]">
+          <div className="grid grid-cols-3 gap-[clamp(16px,2vw,32px)] max-w-[900px]">
+            {steps.map((s, i) => (
+              <div key={i} className="flex flex-col">
+                {/* Step number + line */}
+                <div className="flex items-center gap-3 mb-3">
+                  <span
+                    className="text-[clamp(11px,0.9vw,13px)] font-semibold tracking-wide"
+                    style={{ color: i === 2 ? 'var(--teal)' : 'var(--muted-2)' }}
+                  >
+                    {s.num}
+                  </span>
+                  <div className="flex-1 h-px" style={{ background: i === 2 ? 'linear-gradient(90deg, var(--teal), transparent)' : 'rgba(255,255,255,0.08)' }} />
+                </div>
+                {/* Content */}
+                <h4 className="font-sans font-semibold text-[clamp(14px,1.15vw,18px)] text-white mb-1.5">{s.title}</h4>
+                <p className="text-[clamp(11px,0.9vw,14px)] leading-relaxed" style={{ color: 'var(--muted)' }}>{s.desc}</p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </FadeUp>
       </div>
     </Slide>
