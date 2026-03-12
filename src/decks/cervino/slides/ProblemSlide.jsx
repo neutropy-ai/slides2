@@ -3,8 +3,9 @@ import Topbar, { SlideNumber } from '../../../components/Topbar'
 import GlassDivider from '../../../components/glass/GlassDivider'
 import BlurReveal from '../../../components/anim/BlurReveal'
 import FadeUp from '../../../components/anim/FadeUp'
+import HlsVideo from '../../../components/HlsVideo'
 
-const ATM = 'radial-gradient(ellipse 70% 60% at 50% 100%, rgba(6,182,212,0.05), transparent 50%), #000'
+const ATM = 'radial-gradient(ellipse 70% 60% at 50% 100%, rgba(6,182,212,0.1), transparent 50%), rgba(0,0,0,0.55)'
 
 const stats = [
   { value: '73%', label: "of patients won't leave a voicemail" },
@@ -14,7 +15,14 @@ const stats = [
 
 export default function ProblemSlide({ isActive, slideIndex }) {
   return (
-    <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
+    <Slide
+      isActive={isActive}
+      slideIndex={slideIndex}
+      atmosphere={ATM}
+      background={
+        <HlsVideo src="https://stream.mux.com/s8pMcOvMQXc4GD6AX4e1o01xFogFxipmuKltNfSYza0200.m3u8" />
+      }
+    >
       <Topbar right={<SlideNumber n={2} />} />
       <GlassDivider />
 

@@ -3,12 +3,20 @@ import Topbar, { SlideNumber } from '../../../components/Topbar'
 import GlassDivider from '../../../components/glass/GlassDivider'
 import SlideUpLine from '../../../components/anim/SlideUpLine'
 import BlurReveal from '../../../components/anim/BlurReveal'
+import HlsVideo from '../../../components/HlsVideo'
 
-const ATM = 'radial-gradient(ellipse 80% 60% at 20% 80%, rgba(6,182,212,0.06), transparent 60%), radial-gradient(ellipse 50% 40% at 85% 15%, rgba(14,165,233,0.03), transparent), #000'
+const ATM = 'radial-gradient(ellipse 80% 60% at 20% 80%, rgba(6,182,212,0.12), transparent 60%), radial-gradient(ellipse 50% 40% at 85% 15%, rgba(14,165,233,0.06), transparent), rgba(0,0,0,0.55)'
 
 export default function CloseSlide({ isActive, slideIndex }) {
   return (
-    <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
+    <Slide
+      isActive={isActive}
+      slideIndex={slideIndex}
+      atmosphere={ATM}
+      background={
+        <HlsVideo src="https://stream.mux.com/PkFsoKeakRLgL01gjf02CRcSbsJ600Z00NvLr9eRZ92pLbA.m3u8" />
+      }
+    >
       <Topbar right={<SlideNumber n={11} />} />
       <GlassDivider />
 

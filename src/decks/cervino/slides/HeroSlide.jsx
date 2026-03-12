@@ -2,12 +2,20 @@ import Slide from '../../../components/Slide'
 import Topbar, { MetadataRow } from '../../../components/Topbar'
 import GlassDivider from '../../../components/glass/GlassDivider'
 import SlideUpLine from '../../../components/anim/SlideUpLine'
+import HlsVideo from '../../../components/HlsVideo'
 
-const ATM = 'radial-gradient(ellipse 80% 60% at 20% 80%, rgba(6,182,212,0.06), transparent 60%), radial-gradient(ellipse 50% 40% at 85% 15%, rgba(14,165,233,0.03), transparent), #000'
+const ATM = 'radial-gradient(ellipse 80% 60% at 20% 80%, rgba(6,182,212,0.12), transparent 60%), radial-gradient(ellipse 50% 40% at 85% 15%, rgba(14,165,233,0.06), transparent), rgba(0,0,0,0.55)'
 
 export default function HeroSlide({ isActive, slideIndex }) {
   return (
-    <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
+    <Slide
+      isActive={isActive}
+      slideIndex={slideIndex}
+      atmosphere={ATM}
+      background={
+        <HlsVideo src="https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8" />
+      }
+    >
       <Topbar
         right={
           <MetadataRow items={[
