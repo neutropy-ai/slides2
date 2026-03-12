@@ -33,10 +33,10 @@ const features = [
 function FeatureIcon({ children }) {
   return (
     <div
-      className="w-9 h-9 rounded-[10px] flex items-center justify-center mb-3"
-      style={{ background: 'var(--teal-glow)' }}
+      className="w-8 h-8 rounded-[8px] flex items-center justify-center shrink-0"
+      style={{ background: 'rgba(255,255,255,0.06)' }}
     >
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         {children}
       </svg>
     </div>
@@ -72,8 +72,10 @@ export default function WhatWeDoSlide({ isActive, slideIndex }) {
           {features.map((f, i) => (
             <FadeUp key={i} delay={0.5 + i * 0.1}>
               <GlassCard hover>
-                <FeatureIcon>{f.icon}</FeatureIcon>
-                <h3 className="font-sans font-semibold text-[clamp(14px,1.2vw,18px)] text-white mb-1.5">{f.title}</h3>
+                <div className="flex items-center gap-2.5 mb-3">
+                  <FeatureIcon>{f.icon}</FeatureIcon>
+                  <h3 className="font-sans font-semibold text-[clamp(14px,1.2vw,18px)] text-white">{f.title}</h3>
+                </div>
                 <p className="font-sans text-[clamp(12px,1vw,15px)] leading-relaxed" style={{ color: 'var(--muted)' }}>{f.desc}</p>
               </GlassCard>
             </FadeUp>
