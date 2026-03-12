@@ -8,20 +8,20 @@ import FadeUp from '../../../components/anim/FadeUp'
 const ATM = 'radial-gradient(ellipse 70% 50% at 60% 40%, rgba(99,102,241,0.04), transparent), radial-gradient(ellipse 40% 40% at 15% 80%, rgba(6,182,212,0.04), transparent), #000'
 
 const preps = [
-  { dept: 'Gastroenterology', msg: '"Please fast for 12 hours before your endoscopy. No food or drink after 8pm."' },
-  { dept: 'Neurology', msg: '"Bring a list of all current medications and any previous scans or test results."' },
-  { dept: 'Respiratory', msg: '"Avoid using your inhaler for 4 hours before your lung function test if safe."' },
+  { dept: 'Gastroenterology', msg: 'Fast 12 hours before endoscopy. No food or drink after 8pm.' },
+  { dept: 'Neurology', msg: 'Bring current medication list and any previous scans or test results.' },
+  { dept: 'Respiratory', msg: 'Avoid using your inhaler 4 hours before lung function test if safe.' },
 ]
 
 function WAMockup({ name, children }) {
   return (
-    <div className="rounded-xl overflow-hidden" style={{ width: 'clamp(210px, 18vw, 260px)', border: '1px solid rgba(255,255,255,0.05)', boxShadow: '0 16px 48px rgba(0,0,0,0.4)' }}>
-      <div className="flex items-center gap-2 px-3 py-2.5" style={{ background: '#075E54' }}>
-        <div className="w-6 h-6 rounded-full flex items-center justify-center text-[9px] text-white font-semibold" style={{ background: 'rgba(255,255,255,0.15)' }}>CM</div>
-        <span className="text-[11px] font-semibold text-white">{name}</span>
+    <div className="rounded-xl overflow-hidden w-full" style={{ border: '1px solid rgba(255,255,255,0.05)', boxShadow: '0 16px 48px rgba(0,0,0,0.4)' }}>
+      <div className="flex items-center gap-2 px-3 py-2" style={{ background: '#075E54' }}>
+        <div className="w-5 h-5 rounded-full flex items-center justify-center text-[8px] text-white font-semibold" style={{ background: 'rgba(255,255,255,0.15)' }}>CM</div>
+        <span className="text-[10px] font-semibold text-white">{name}</span>
       </div>
-      <div className="p-3" style={{ background: '#0b141a' }}>
-        <div className="rounded-[0_10px_10px_10px] px-3 py-2.5 text-[11px] leading-snug" style={{ background: '#1f2c34', color: 'rgba(255,255,255,0.85)' }}>
+      <div className="p-2.5" style={{ background: '#0b141a' }}>
+        <div className="rounded-[0_8px_8px_8px] px-2.5 py-2 text-[10px] leading-snug" style={{ background: '#1f2c34', color: 'rgba(255,255,255,0.85)' }}>
           {children}
         </div>
       </div>
@@ -35,7 +35,8 @@ export default function PatientJourneySlide({ isActive, slideIndex }) {
       <Topbar right={<SlideNumber n={6} />} />
       <GlassDivider />
 
-      <div className="flex-1 flex px-[5%] py-[3%] pb-[4%] gap-[5%]">
+      <div className="flex-1 flex px-[5%] py-[3%] pb-[4%] gap-[4%]">
+        {/* Left: heading + prep cards */}
         <div className="flex-1 flex flex-col justify-center">
           <BlurReveal delay={0.15}>
             <p className="font-sans text-[clamp(11px,1vw,16px)] font-medium tracking-[0.12em] uppercase" style={{ color: 'var(--muted)' }}>
@@ -44,23 +45,31 @@ export default function PatientJourneySlide({ isActive, slideIndex }) {
           </BlurReveal>
           <BlurReveal delay={0.25}>
             <h2 className="font-serif font-normal text-white mt-3" style={{ fontSize: 'clamp(20px, 3vw, 48px)', lineHeight: 1.04 }}>
-              Every touchpoint. Automated by <i style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.4) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', filter: 'drop-shadow(0 0 40px rgba(255,255,255,0.12)) drop-shadow(0 0 12px rgba(6,182,212,0.2))' }}>specialty.</i>
+              Reminders that <i style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.4) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', filter: 'drop-shadow(0 0 40px rgba(255,255,255,0.12)) drop-shadow(0 0 12px rgba(6,182,212,0.2))' }}>reduce no-shows.</i>
             </h2>
           </BlurReveal>
+          <BlurReveal delay={0.45}>
+            <p className="mt-3 max-w-[90%]" style={{ fontSize: 'clamp(12px, 1vw, 16px)', color: 'var(--muted)', lineHeight: 1.6 }}>
+              Every touchpoint automated by specialty. Patients get the right prep instructions, at the right time, on the channel they actually check.
+            </p>
+          </BlurReveal>
 
-          <div className="flex flex-col gap-2.5 mt-5">
+          <div className="flex flex-col gap-2 mt-5">
             {preps.map((p, i) => (
-              <FadeUp key={i} delay={0.4 + i * 0.1}>
+              <FadeUp key={i} delay={0.5 + i * 0.08}>
                 <GlassCard>
-                  <span className="text-[9px] font-semibold tracking-[0.1em] uppercase" style={{ color: 'var(--teal)' }}>{p.dept}</span>
-                  <p className="mt-1 text-xs" style={{ color: 'var(--muted)', maxWidth: 'none' }}>{p.msg}</p>
+                  <div className="flex items-center gap-3">
+                    <span className="text-[9px] font-semibold tracking-[0.1em] uppercase shrink-0" style={{ color: 'var(--teal)', minWidth: '110px' }}>{p.dept}</span>
+                    <span className="text-[clamp(11px,0.9vw,13px)]" style={{ color: 'var(--muted)' }}>{p.msg}</span>
+                  </div>
                 </GlassCard>
               </FadeUp>
             ))}
           </div>
         </div>
 
-        <FadeUp delay={0.4} className="flex flex-col items-center justify-center gap-3.5">
+        {/* Right: WhatsApp mockups */}
+        <FadeUp delay={0.4} className="flex flex-col items-center justify-center gap-3" style={{ width: 'clamp(210px, 20vw, 270px)' }}>
           <WAMockup name="Cervino Medical">
             Hi Michael, reminder for your neurology appointment.<br /><br />
             <strong className="text-white">Prof Peter Widdess-Walsh</strong><br />
