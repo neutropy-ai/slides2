@@ -1,52 +1,111 @@
 /**
  * Liquid glass phone mockup.
- * Frosted glass frame with inner content area.
+ * Premium frosted glass frame with gradient border, ambient glow,
+ * edge highlights, and depth effects.
  */
 export default function GlassPhone({ children, className = '' }) {
   return (
+    /* Gradient border wrapper — the background gradient shows through
+       the 1px gap between this outer div and the inner glass div */
     <div
       className={`relative ${className}`}
       style={{
         width: 'clamp(220px, 20vw, 280px)',
-        borderRadius: '28px',
-        padding: '6px',
-        background: 'rgba(255, 255, 255, 0.04)',
-        backdropFilter: 'blur(20px)',
-        WebkitBackdropFilter: 'blur(20px)',
-        border: '1px solid rgba(255, 255, 255, 0.08)',
-        boxShadow: '0 24px 64px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.06)',
+        borderRadius: '29px',
+        padding: '1px',
+        background: 'linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.10) 30%, rgba(255,255,255,0.04) 70%, rgba(255,255,255,0.01) 100%)',
+        boxShadow: '0 0 60px rgba(6,182,212,0.08), 0 24px 64px rgba(0,0,0,0.5)',
       }}
     >
-      {/* Top highlight */}
+      {/* Glass frame */}
       <div
-        className="absolute top-0 left-4 right-4 h-px"
+        className="relative"
         style={{
-          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.1) 30%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.1) 70%, transparent)',
-        }}
-      />
-
-      {/* Notch */}
-      <div className="absolute top-[6px] left-1/2 -translate-x-1/2 z-20">
-        <div
-          className="h-[4px] rounded-b-lg"
-          style={{
-            width: '80px',
-            background: 'rgba(0, 0, 0, 0.8)',
-            borderBottomLeftRadius: '8px',
-            borderBottomRightRadius: '8px',
-          }}
-        />
-      </div>
-
-      {/* Inner screen */}
-      <div
-        className="relative overflow-hidden"
-        style={{
-          borderRadius: '24px',
-          background: '#080808',
+          borderRadius: '28px',
+          padding: '6px',
+          background: 'rgba(255, 255, 255, 0.04)',
+          backdropFilter: 'blur(24px) saturate(200%) brightness(1.1)',
+          WebkitBackdropFilter: 'blur(24px) saturate(200%) brightness(1.1)',
+          boxShadow:
+            'inset 0 1px 0 rgba(255,255,255,0.12), inset 0 -1px 0 rgba(0,0,0,0.15)',
         }}
       >
-        {children}
+        {/* Top specular highlight — brighter, wider */}
+        <div
+          className="absolute top-0 left-3 right-3 h-px z-10"
+          style={{
+            background:
+              'linear-gradient(90deg, transparent 5%, rgba(255,255,255,0.25) 25%, rgba(255,255,255,0.38) 50%, rgba(255,255,255,0.25) 75%, transparent 95%)',
+          }}
+        />
+        {/* Secondary diffuse top glow */}
+        <div
+          className="absolute top-0 left-6 right-6 z-10"
+          style={{
+            height: '6px',
+            background:
+              'linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 100%)',
+            borderRadius: '28px 28px 0 0',
+          }}
+        />
+
+        {/* Left edge highlight */}
+        <div
+          className="absolute left-0 top-8 bottom-8 z-10 pointer-events-none"
+          style={{
+            width: '1px',
+            background:
+              'linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.10) 20%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.10) 80%, transparent 100%)',
+          }}
+        />
+        {/* Right edge highlight */}
+        <div
+          className="absolute right-0 top-8 bottom-8 z-10 pointer-events-none"
+          style={{
+            width: '1px',
+            background:
+              'linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.10) 20%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.10) 80%, transparent 100%)',
+          }}
+        />
+
+        {/* Notch with glass highlight */}
+        <div className="absolute top-[6px] left-1/2 -translate-x-1/2 z-20">
+          {/* Notch highlight rim */}
+          <div
+            style={{
+              width: '84px',
+              height: '6px',
+              borderBottomLeftRadius: '10px',
+              borderBottomRightRadius: '10px',
+              background:
+                'linear-gradient(180deg, rgba(255,255,255,0.08) 0%, transparent 100%)',
+              padding: '1px 1px 0 1px',
+            }}
+          >
+            <div
+              style={{
+                width: '100%',
+                height: '100%',
+                borderBottomLeftRadius: '9px',
+                borderBottomRightRadius: '9px',
+                background: 'rgba(0, 0, 0, 0.85)',
+              }}
+            />
+          </div>
+        </div>
+
+        {/* Inner screen with inset shadow for depth */}
+        <div
+          className="relative overflow-hidden"
+          style={{
+            borderRadius: '24px',
+            background: '#080808',
+            boxShadow:
+              'inset 0 2px 6px rgba(0,0,0,0.6), inset 0 0 2px rgba(0,0,0,0.4)',
+          }}
+        >
+          {children}
+        </div>
       </div>
     </div>
   )

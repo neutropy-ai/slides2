@@ -3,20 +3,21 @@
 @tailwind utilities;
 
 :root {
-  /* Glass system */
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-blur: 12px;
-  --glass-highlight: rgba(255, 255, 255, 0.06);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05);
-  --glass-shadow-lg: 0 16px 64px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  /* Glass system - enhanced */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-blur: 20px;
+  --glass-saturate: 180%;
+  --glass-highlight: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --glass-shadow-lg: 0 16px 64px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 
   /* Teal system */
   --teal: #06b6d4;
   --teal-2: #0ea5e9;
   --teal-d: #0891b2;
   --teal-dim: rgba(6, 182, 212, 0.1);
-  --teal-glow: rgba(6, 182, 212, 0.15);
+  --teal-glow: rgba(6, 182, 212, 0.2);
 
   /* Text */
   --muted: #80838e;
@@ -31,7 +32,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.025;
+  opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 128px 128px;
   pointer-events: none;
@@ -41,4 +42,39 @@
 /* SVG filter for liquid glass refraction */
 .glass-filter {
   filter: url(#glass-distortion);
+}
+
+/* Glass shimmer animation */
+@keyframes glassShimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+/* Glass divider shimmer */
+@keyframes glassDividerShimmer {
+  0%, 100% { transform: translateX(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  50% { transform: translateX(200%); }
+}
+
+/* Glass card shimmer utility */
+.glass-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.03),
+    transparent
+  );
+  animation: glassShimmer 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
 }
