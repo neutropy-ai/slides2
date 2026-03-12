@@ -45,12 +45,12 @@ export default function PatientJourneySlide({ isActive, slideIndex }) {
           </BlurReveal>
           <BlurReveal delay={0.25}>
             <h2 className="font-serif font-normal text-white mt-3" style={{ fontSize: 'clamp(20px, 3vw, 48px)', lineHeight: 1.04 }}>
-              Reminders that <i style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.4) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', filter: 'drop-shadow(0 0 40px rgba(255,255,255,0.12)) drop-shadow(0 0 12px rgba(6,182,212,0.2))' }}>reduce no-shows.</i>
+              Every touchpoint. <i style={{ background: 'linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.5) 40%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.4) 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', filter: 'drop-shadow(0 0 40px rgba(255,255,255,0.12)) drop-shadow(0 0 12px rgba(6,182,212,0.2))' }}>Automated.</i>
             </h2>
           </BlurReveal>
           <BlurReveal delay={0.45}>
             <p className="mt-3 max-w-[90%]" style={{ fontSize: 'clamp(12px, 1vw, 16px)', color: 'var(--muted)', lineHeight: 1.6 }}>
-              Every touchpoint automated by specialty. Patients get the right prep instructions, at the right time, on the channel they actually check.
+              Push reminders that reduce no-shows. Specialty-specific prep instructions sent at the right time, on the channel patients actually check.
             </p>
           </BlurReveal>
 
