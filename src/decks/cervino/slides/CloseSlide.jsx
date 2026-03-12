@@ -17,7 +17,7 @@ export default function CloseSlide({ isActive, slideIndex }) {
         <HlsVideo src="https://stream.mux.com/PkFsoKeakRLgL01gjf02CRcSbsJ600Z00NvLr9eRZ92pLbA.m3u8" />
       }
     >
-      <Topbar right={<SlideNumber n={11} />} />
+      <Topbar right={<SlideNumber n={12} />} />
       <GlassDivider />
 
       <div className="flex-1 flex items-end px-[5%] pb-[8%]">

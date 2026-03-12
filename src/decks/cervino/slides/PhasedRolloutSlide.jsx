@@ -36,7 +36,7 @@ const phases = [
 export default function PhasedRolloutSlide({ isActive, slideIndex }) {
   return (
     <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
-      <Topbar right={<SlideNumber n={9} />} />
+      <Topbar right={<SlideNumber n={10} />} />
       <GlassDivider />
 
       <div className="flex-1 flex flex-col justify-center px-[5%]">

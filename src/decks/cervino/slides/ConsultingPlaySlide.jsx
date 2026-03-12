@@ -15,7 +15,7 @@ const steps = [
 export default function ConsultingPlaySlide({ isActive, slideIndex }) {
   return (
     <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
-      <Topbar right={<SlideNumber n={8} />} />
+      <Topbar right={<SlideNumber n={9} />} />
       <GlassDivider />
 
       <div className="flex-1 flex flex-col justify-center px-[5%]">

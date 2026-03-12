@@ -26,7 +26,7 @@ const monthly = [
 export default function WhatsIncludedSlide({ isActive, slideIndex }) {
   return (
     <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
-      <Topbar right={<SlideNumber n={10} />} />
+      <Topbar right={<SlideNumber n={11} />} />
       <GlassDivider />
 
       <div className="flex-1 flex flex-col justify-center px-[5%]">

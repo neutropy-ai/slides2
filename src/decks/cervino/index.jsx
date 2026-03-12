@@ -9,6 +9,7 @@ import ProofSlide from './slides/ProofSlide'
 import ConsultingPlaySlide from './slides/ConsultingPlaySlide'
 import PhasedRolloutSlide from './slides/PhasedRolloutSlide'
 import WhatsIncludedSlide from './slides/WhatsIncludedSlide'
+import OutcomesSlide from './slides/OutcomesSlide'
 import CloseSlide from './slides/CloseSlide'
 
 export default function CervinoDeck() {
@@ -21,6 +22,7 @@ export default function CervinoDeck() {
       <AppointmentReminderSlide />
       <PatientJourneySlide />
       <ProofSlide />
+      <OutcomesSlide />
       <ConsultingPlaySlide />
       <PhasedRolloutSlide />
       <WhatsIncludedSlide />
