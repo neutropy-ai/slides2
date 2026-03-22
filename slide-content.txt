@@ -1,0 +1,209 @@
+SLIDE 1 — HERO
+Prepared for: Cervino Medical
+Date: March 2026
+Type: Proposal
+Sector: Healthcare AI
+
+AI communication for healthcare.
+
+
+SLIDE 2 — THE COMMUNICATION GAP
+Every practice you consult for loses patients to the same problem. The phone rings. Nobody picks up. Revenue walks out the door.
+
+73% of patients won't leave a voicemail
+36 month wait for a public neurologist
+15-30% specialist clinic no-show rate
+
+
+SLIDE 3 — WHAT NEUTROPY DOES
+AI voice and messaging. Done for you.
+
+We audit, build, and manage everything. Not a platform you learn. A managed service that runs.
+
+Inbound receptionist — Every call answered and routed
+Outbound caller — Reminders, confirmations, referral chase
+WhatsApp campaigns — Reactivation, prep, follow-ups
+Review automations — More reviews, higher Google ranking
+
+
+SLIDE 4 — BUILT FOR HEALTHCARE
+What these agents actually do.
+
+Speaks your patient's language — Detects the language automatically. Responds in kind. No setup per patient.
+No more 8am phone rush — On at 3am. On at 3pm. Covers the peaks that burn out your front desk.
+50 calls at once. Zero wait. — No patient queues. No engaged tone. Every call answered first ring.
+Knows when to hand off — Confidence thresholds on every decision. Escalates to a human when it should. Not before. Not after.
+Patient data stays off the line — No medical records discussed over the phone. Books, routes, confirms. Nothing clinical.
+
+AI that escalates everything isn't autonomous. AI that never escalates is reckless. These agents have clear protocols and confidence thresholds on every decision.
+
+
+SLIDE 5 — OUTCOMES
+Outcomes that move access, cost, and safety
+
+01 Drive More Bookings — Capture after-hours calls and reduce abandonment.
+02 Achieve Higher Show Rates — Smart reminders and easy rescheduling.
+03 Create Happier Patients — Quick answers about insurance, prep, and directions.
+04 Deliver Shorter Waits — Instant responses across phone, SMS, and chat.
+
+
+SLIDE 6 — LIVE ROUTING
+The patient describes symptoms. The AI triages.
+
+No hold music. No transfers. AI matches the query to the right department and books directly or routes to the consultant's secretary.
+
+Specialties: Neurology, Respiratory, Gastro, Nephrology, Vascular, Endocrinology
+
+AI: "Good morning, Cervino Medical. How can I help?"
+Caller: "I've been having recurring headaches and dizziness over the past few weeks."
+AI: "Based on what you're describing, our neurology team would be best placed to assess you. Prof Widdess-Walsh has availability next Thursday at 10am, or Dr Shukralla has Friday afternoon. Would either work?"
+Routed to Neurology
+
+
+SLIDE 7 — OUTBOUND VOICE (GP REFERRALS)
+Your AI calls the GP. Not the other way around.
+
+Referrals arrive with missing details. Instead of your admin spending hours on phone tag, the AI handles the follow-up.
+
+- Calls GP to confirm referral details
+- Collects missing medical history
+- Confirms correct specialist assignment
+- Schedules patient, sends all confirmations
+
+AI: "Good afternoon, I'm calling from Cervino Medical regarding a neurology referral for a patient of Dr. Murphy's."
+Caller: "Yes, what do you need?"
+AI: "The referral letter didn't include the patient's current medication list. Could someone send that through? I can provide the secure email."
+Caller: "Sure, I'll get that over today."
+Referral Complete
+
+
+SLIDE 8 — OUTBOUND VOICE (APPOINTMENTS)
+Your AI calls patients. Before they forget.
+
+No-shows cost clinics thousands per month. Instead of relying on texts patients ignore, the AI calls ahead to confirm, reschedule, or backfill the slot.
+
+- Calls patients 48h before appointment
+- Confirms attendance or reschedules
+- Offers open slots to waitlisted patients
+- Sends follow-up WhatsApp confirmation
+
+AI: "Hi Michael, I'm calling from Cervino Medical to confirm your neurology appointment with Prof Widdess-Walsh this Thursday at 10am. Will you be able to attend?"
+Caller: "Oh right, I actually need to reschedule — I've a conflict Thursday morning."
+AI: "No problem. I have Friday at 2:30pm available with the same consultant. Would that work?"
+Caller: "Friday works perfectly, thanks."
+Rescheduled · Slot Released
+
+
+SLIDE 9 — PATIENT JOURNEY
+Every touchpoint. Automated by specialty.
+
+Gastroenterology: "Please fast for 12 hours before your endoscopy. No food or drink after 8pm."
+Neurology: "Bring a list of all current medications and any previous scans or test results."
+Respiratory: "Avoid using your inhaler for 4 hours before your lung function test if safe."
+
+WhatsApp Message 1:
+"Hi Michael, reminder for your neurology appointment.
+Prof Peter Widdess-Walsh
+Thursday 20th March, 10:00am
+Suite 16, Beacon Court, Sandyford
+Please bring your medication list and previous MRI scans.
+[Confirm] [Reschedule]"
+
+WhatsApp Message 2:
+"Hi Sarah, a slot has opened for your respiratory appointment with Dr Sahadevan.
+Tomorrow at 2:30pm
+Beacon Court, Sandyford
+[Yes, book me in] [Keep original date]"
+
+
+SLIDE 10 — REVIEW AUTOMATIONS
+Happy patients talk. Google listens.
+
+After every positive interaction, the AI sends a review prompt. Timed right. Personalised. Patients who had a good experience are asked while it's fresh.
+
+4.9 (127 reviews)
+
+Patient visit → AI follow-up → Review request → Google ranking
+
+
+SLIDE 11 — BETTER CARE
+Make happy patients your north star.
+
+95% reduction in patient wait times
+Every call answered first ring. No queue. No hold.
+
+Higher NPS — Patients rate the experience, not the wait.
+Better reviews — Automated prompts after every good interaction.
+Zero churn — No sick days. No training costs. No notice period.
+Never tired — Same quality at call 1 and call 500.
+
+
+SLIDE 12 — PROOF OF CONCEPT
+We build it for your clinic first.
+
+10+ consultants. 7 specialties. One phone line. Real patients. If it works here, it works anywhere you consult.
+
+Your Clinic Today:
+- One receptionist, seven specialties
+- GP referrals chased manually
+- No automated reminders
+- Cancellations leave empty slots
+- After-hours calls go to voicemail
+
+With Neutropy:
++ AI answers and routes every call 24/7
++ Outbound agent chases referral details
++ Specialty-specific WhatsApp prep + reminders
++ Waitlist patients get instant offers
++ Every missed call recovered
+
+
+SLIDE 13 — THE CONSULTING PLAY
+A new service line. Recurring revenue.
+
+Every practice Cervino consults for is a potential deployment. You own the relationship. We handle the technology.
+
+Client Practice — Has communication gaps
+Cervino Audit — You identify the problems
+Neutropy Deploys — We build and manage the AI
+
+
+SLIDE 14 — PHASED ROLLOUT
+Your clinic first. Then your clients.
+
+Phase 1 (GO LIVE) Week 1-2:
+AI Receptionist trained on all 7 specialties. Intelligent routing live on inbound calls. WhatsApp reminders configured per department.
+
+Phase 2 (LAYER ON) Week 3-4:
+GP referral agent goes live. Waitlist backfill activated. Specialty-specific prep instructions and post-visit follow-ups.
+
+Phase 3 (SCALE) Month 2+:
+Deploy to your first consulting client. Template the setup. Build the repeatable model. AI communication as a standard deliverable.
+
+
+SLIDE 15 — WHAT'S INCLUDED
+Everything you need. Nothing you don't.
+
+Exact pricing discussed after discovery, based on scope and number of specialties.
+
+One-Time Setup (Custom-built for your clinic. No templates):
+- AI Receptionist with specialty routing
+- GP Referral processing agent
+- WhatsApp automation configuration
+- Specialty-specific prep instructions
+- Waitlist management system
+
+Ongoing Monthly (Everything runs and scales. You don't manage it):
+- All AI systems running 24/7
+- Outbound referral processing
+- Appointment reminders and follow-ups
+- Ongoing optimisation and support
+- WhatsApp and SMS messaging included
+
+
+SLIDE 16 — CLOSE
+Next step is simple.
+
+A 20-minute discovery call. We walk through your clinic setup, map the specialties, and plan the first deployment.
+
+Luke Murphy · luke@neutropy.ai · neutropy.ai
