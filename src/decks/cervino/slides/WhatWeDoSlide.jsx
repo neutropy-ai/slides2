@@ -11,26 +11,26 @@ const ATM = 'radial-gradient(ellipse 70% 50% at 60% 40%, rgba(99,102,241,0.04), 
 const services = [
   {
     title: 'Inbound receptionist',
-    desc: 'Every call answered and routed',
+    desc: 'Every call answered and routed, around the clock',
   },
   {
     title: 'Outbound caller',
-    desc: 'Reminders, confirmations, referral chase',
+    desc: 'Reminders, confirmations, referral follow-up',
   },
   {
-    title: 'WhatsApp campaigns',
-    desc: 'Reactivation, prep, follow-ups',
+    title: 'WhatsApp messaging',
+    desc: 'Prep instructions, reactivation, follow-ups',
   },
   {
     title: 'Review automations',
-    desc: 'More reviews, higher Google ranking',
+    desc: 'More reviews, better Google visibility',
   },
 ]
 
 export default function WhatWeDoSlide({ isActive, slideIndex }) {
   return (
     <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
-      <Topbar right={<SlideNumber n={slideIndex + 1} />} />
+      <Topbar right={<SlideNumber n={4} />} />
       <GlassDivider />
 
       <div className="flex-1 flex flex-col justify-center px-[5%]">
@@ -45,7 +45,7 @@ export default function WhatWeDoSlide({ isActive, slideIndex }) {
             <SlideUpLine delay={0.2}>
               AI voice and messaging.{' '}
               <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                Done for you.
+                Managed for you.
               </i>
             </SlideUpLine>
           </h2>
@@ -53,7 +53,7 @@ export default function WhatWeDoSlide({ isActive, slideIndex }) {
 
         <BlurReveal delay={0.4}>
           <p className="max-w-[580px] mb-[clamp(24px,3vw,44px)]" style={{ fontSize: 'clamp(13px, 1.1vw, 17px)', color: 'var(--muted)', lineHeight: 1.65 }}>
-            We audit, build, and manage everything. Not a platform you learn. A managed service that runs.
+            We build and run everything. Not a platform to learn. A managed service that handles the calls your team can't get to.
           </p>
         </BlurReveal>
 

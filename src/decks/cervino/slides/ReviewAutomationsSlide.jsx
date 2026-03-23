@@ -43,7 +43,7 @@ const steps = [
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
     ),
-    label: 'Google ranking',
+    label: 'Google ranking improves',
     highlighted: true,
   },
 ]
@@ -89,7 +89,7 @@ function FlowArrow() {
 export default function ReviewAutomationsSlide({ isActive, slideIndex }) {
   return (
     <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
-      <Topbar right={<SlideNumber n={slideIndex + 1} />} />
+      <Topbar right={<SlideNumber n={9} />} />
       <GlassDivider />
 
       <div className="flex-1 flex flex-col justify-center px-[5%]">
@@ -105,7 +105,7 @@ export default function ReviewAutomationsSlide({ isActive, slideIndex }) {
             <br />
             <SlideUpLine delay={0.3}>
               <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #0ea5e9 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                Google listens.
+                Google takes note.
               </i>
             </SlideUpLine>
           </h2>
@@ -114,7 +114,7 @@ export default function ReviewAutomationsSlide({ isActive, slideIndex }) {
         {/* Body copy */}
         <BlurReveal delay={0.45}>
           <p className="max-w-[560px] mb-[clamp(16px,2vw,28px)]" style={{ fontSize: 'clamp(13px, 1.1vw, 17px)', color: 'var(--muted)', lineHeight: 1.65 }}>
-            After every positive interaction, the AI sends a review prompt. Timed right. Personalised. Patients who had a good experience are asked while it's fresh.
+            After every positive interaction, the agent sends a review prompt. Timed well, relevant to the visit, while the experience is still fresh.
           </p>
         </BlurReveal>
 

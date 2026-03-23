@@ -17,8 +17,8 @@ const capabilities = [
         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
       </svg>
     ),
-    title: "Speaks your patient's language",
-    desc: 'Detects the language automatically. Responds in kind. No setup per patient.',
+    title: "Speaks the patient's language",
+    desc: 'Detects language automatically. Responds in kind. No manual setup per patient.',
   },
   {
     icon: (
@@ -28,7 +28,7 @@ const capabilities = [
       </svg>
     ),
     title: 'No more 8am phone rush',
-    desc: 'On at 3am. On at 3pm. Covers the peaks that burn out your front desk.',
+    desc: 'Available at 3am or 3pm. Covers the peaks that wear out your front desk.',
   },
   {
     icon: (
@@ -39,8 +39,8 @@ const capabilities = [
         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
-    title: '50 calls at once. Zero wait.',
-    desc: 'No patient queues. No engaged tone. Every call answered first ring.',
+    title: '50 calls at once. No wait.',
+    desc: 'No queue. No engaged tone. Every call answered on the first ring.',
   },
   {
     icon: (
@@ -52,7 +52,7 @@ const capabilities = [
       </svg>
     ),
     title: 'Knows when to hand off',
-    desc: 'Confidence thresholds on every decision. Escalates to a human when it should. Not before. Not after.',
+    desc: 'Confidence thresholds on every decision. Passes to a human when it should. Not before, not after.',
     highlighted: true,
   },
   {
@@ -63,7 +63,7 @@ const capabilities = [
       </svg>
     ),
     title: 'Patient data stays off the line',
-    desc: 'No medical records discussed over the phone. Books, routes, confirms. Nothing clinical.',
+    desc: 'No medical records discussed. Books, routes, confirms. Nothing clinical.',
   },
 ]
 
@@ -92,7 +92,7 @@ function CapabilityCard({ icon, title, desc, highlighted, delay }) {
 export default function BuiltForHealthcareSlide({ isActive, slideIndex }) {
   return (
     <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
-      <Topbar right={<SlideNumber n={slideIndex + 1} />} />
+      <Topbar right={<SlideNumber n={5} />} />
       <GlassDivider />
 
       <div className="flex-1 flex flex-col px-[5%] py-[3%]">
@@ -127,13 +127,6 @@ export default function BuiltForHealthcareSlide({ isActive, slideIndex }) {
             <div /> {/* Empty cell to keep 2 cards on left */}
           </div>
         </div>
-
-        {/* Footer quote */}
-        <BlurReveal delay={1.0}>
-          <p className="mt-[clamp(16px,2vw,28px)] max-w-[700px] text-[clamp(12px,0.95vw,14px)] leading-relaxed italic" style={{ color: 'var(--muted-2)' }}>
-            AI that escalates everything isn't autonomous. AI that never escalates is reckless. These agents have clear protocols and confidence thresholds on every decision.
-          </p>
-        </BlurReveal>
       </div>
     </Slide>
   )

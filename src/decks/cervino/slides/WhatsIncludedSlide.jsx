@@ -8,25 +8,25 @@ import FadeUp from '../../../components/anim/FadeUp'
 const ATM = 'radial-gradient(ellipse 70% 50% at 60% 40%, rgba(99,102,241,0.04), transparent), radial-gradient(ellipse 40% 40% at 15% 80%, rgba(6,182,212,0.04), transparent), #000'
 
 const setup = [
-  'AI Receptionist with specialty routing',
-  'GP Referral processing agent',
-  'WhatsApp automation configuration',
-  'Specialty-specific prep instructions',
-  'Waitlist management system',
+  'Dedicated AI agent per consultant line',
+  'Outbound reminder and referral agent',
+  'WhatsApp automation configured',
+  'Specialty-specific prep messaging',
+  'Waitlist management',
 ]
 
 const monthly = [
-  'All AI systems running 24/7',
+  'All agents live 24/7',
   'Outbound referral processing',
-  'Appointment reminders and follow-ups',
-  'Ongoing optimisation and support',
-  'WhatsApp and SMS messaging included',
+  'Appointment reminders',
+  'Ongoing optimisation',
+  'WhatsApp and SMS included',
 ]
 
 export default function WhatsIncludedSlide({ isActive, slideIndex }) {
   return (
     <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
-      <Topbar right={<SlideNumber n={10} />} />
+      <Topbar right={<SlideNumber n={11} />} />
       <GlassDivider />
 
       <div className="flex-1 flex flex-col justify-center px-[5%]">
@@ -41,20 +41,12 @@ export default function WhatsIncludedSlide({ isActive, slideIndex }) {
             <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Nothing you don't.</i>
           </h2>
         </BlurReveal>
-        <BlurReveal delay={0.4}>
-          <p className="mt-2" style={{ fontSize: 'clamp(11px, 0.9vw, 14px)', color: 'var(--muted)' }}>
-            Exact pricing discussed after discovery, based on scope and number of specialties.
-          </p>
-        </BlurReveal>
 
         <FadeUp delay={0.5} className="grid grid-cols-2 gap-[clamp(12px,1.5vw,24px)] mt-[clamp(24px,3vw,36px)] max-w-[900px]">
           <GlassCard>
-            <h3 className="text-[clamp(10px,0.85vw,12px)] font-bold tracking-[0.12em] uppercase mb-1" style={{ color: 'var(--muted)' }}>
+            <h3 className="text-[clamp(10px,0.85vw,12px)] font-bold tracking-[0.12em] uppercase mb-4" style={{ color: 'var(--muted)' }}>
               One-Time Setup
             </h3>
-            <p className="text-[clamp(12px,1vw,14px)] mb-4" style={{ color: 'var(--muted)' }}>
-              Custom-built for your clinic. No templates.
-            </p>
             <ul className="flex flex-col gap-2">
               {setup.map((item, i) => (
                 <li key={i} className="flex gap-2 text-[clamp(12px,1vw,15px)] leading-snug" style={{ color: 'var(--muted)' }}>
@@ -65,12 +57,9 @@ export default function WhatsIncludedSlide({ isActive, slideIndex }) {
           </GlassCard>
 
           <GlassCard variant="teal">
-            <h3 className="text-[clamp(10px,0.85vw,12px)] font-bold tracking-[0.12em] uppercase mb-1" style={{ color: 'var(--teal)' }}>
+            <h3 className="text-[clamp(10px,0.85vw,12px)] font-bold tracking-[0.12em] uppercase mb-4" style={{ color: 'var(--teal)' }}>
               Ongoing Monthly
             </h3>
-            <p className="text-[clamp(12px,1vw,14px)] mb-4" style={{ color: 'var(--muted)' }}>
-              Everything runs and scales. You don't manage it.
-            </p>
             <ul className="flex flex-col gap-2">
               {monthly.map((item, i) => (
                 <li key={i} className="flex gap-2 text-[clamp(12px,1vw,15px)] leading-snug" style={{ color: 'var(--muted)' }}>

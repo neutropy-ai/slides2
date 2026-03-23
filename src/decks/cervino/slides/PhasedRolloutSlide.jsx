@@ -8,23 +8,39 @@ const ATM = 'radial-gradient(ellipse 60% 50% at 75% 55%, rgba(6,182,212,0.05), t
 
 const phases = [
   {
-    n: 1, tag: 'GO LIVE', title: 'Week 1 to 2',
-    desc: 'AI Receptionist trained on all 7 specialties. Intelligent routing live on inbound calls. WhatsApp reminders configured per department.',
+    n: 1,
+    tag: 'WEEKS 1–2',
+    title: 'Phase 1',
+    items: [
+      'One AI agent live on one consultant\'s line',
+      'Inbound calls answered and booked',
+      'WhatsApp confirmation on every booking',
+    ],
   },
   {
-    n: 2, tag: 'LAYER ON', title: 'Week 3 to 4',
-    desc: 'GP referral agent goes live. Waitlist backfill activated. Specialty-specific prep instructions and post-visit follow-ups.',
+    n: 2,
+    tag: 'WEEKS 3–4',
+    title: 'Phase 2',
+    items: [
+      'Outbound reminders and waitlist backfill live',
+      'GP referral follow-up agent active',
+    ],
   },
   {
-    n: 3, tag: 'SCALE', title: 'Month 2+',
-    desc: 'Deploy to your first consulting client. Template the setup. Build the repeatable model. AI communication as a standard deliverable.',
+    n: 3,
+    tag: 'MONTH 2+',
+    title: 'Phase 3',
+    items: [
+      'Remaining consultants added one by one',
+      'Full practice covered',
+    ],
   },
 ]
 
 export default function PhasedRolloutSlide({ isActive, slideIndex }) {
   return (
     <Slide isActive={isActive} slideIndex={slideIndex} atmosphere={ATM}>
-      <Topbar right={<SlideNumber n={9} />} />
+      <Topbar right={<SlideNumber n={10} />} />
       <GlassDivider />
 
       <div className="flex-1 flex flex-col justify-center px-[5%]">
@@ -35,7 +51,8 @@ export default function PhasedRolloutSlide({ isActive, slideIndex }) {
         </BlurReveal>
         <BlurReveal delay={0.25}>
           <h2 className="font-serif font-normal text-white mt-3" style={{ fontSize: 'clamp(20px, 3.5vw, 52px)', lineHeight: 1.04 }}>
-            Your clinic first. Then your <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>clients.</i>
+            One consultant first. Then the{' '}
+            <i style={{ background: 'linear-gradient(135deg, #00E7F7 0%, #04B2BB 45%, #6366F1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>full practice.</i>
           </h2>
         </BlurReveal>
 
@@ -43,7 +60,7 @@ export default function PhasedRolloutSlide({ isActive, slideIndex }) {
           {phases.map((p, i) => (
             <FadeUp key={i} delay={0.5 + i * 0.1}>
               <div
-                className="rounded-2xl overflow-hidden relative"
+                className="rounded-2xl overflow-hidden relative h-full"
                 style={{
                   background: 'rgba(255,255,255,0.025)',
                   border: '1px solid rgba(255,255,255,0.06)',
@@ -68,8 +85,14 @@ export default function PhasedRolloutSlide({ isActive, slideIndex }) {
                       {p.tag}
                     </span>
                   </div>
-                  <h3 className="font-sans font-semibold text-[clamp(14px,1.2vw,18px)] text-white mb-1.5">{p.title}</h3>
-                  <p className="font-sans text-[clamp(12px,1vw,15px)] leading-relaxed" style={{ color: 'var(--muted)' }}>{p.desc}</p>
+                  <h3 className="font-sans font-semibold text-[clamp(14px,1.2vw,18px)] text-white mb-3">{p.title}</h3>
+                  <ul className="flex flex-col gap-1.5">
+                    {p.items.map((item, j) => (
+                      <li key={j} className="flex gap-2 text-[clamp(12px,1vw,15px)] leading-snug" style={{ color: 'var(--muted)' }}>
+                        <span style={{ color: 'var(--teal)' }}>+</span> {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </FadeUp>
